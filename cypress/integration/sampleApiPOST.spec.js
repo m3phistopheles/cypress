@@ -1,7 +1,8 @@
 describe('Making calls to a sample POST API endpoint', function() {
+   var result 
     
     it('should submit a successful post and log the response in the console', function() {
-        cy.request({
+       result =  cy.request({
             method: 'POST',
             url: 'http://dummy.restapiexample.com/api/v1/create',
             body: {
@@ -10,8 +11,9 @@ describe('Making calls to a sample POST API endpoint', function() {
                 age: '31',
                 id: '42'
             }
-        }).then((response) => {
-            cy.log(response.body)
         })
+        result.its('body')
+              .its('name')
+              .should('include', 'vero');i
     })
 })
