@@ -39,5 +39,6 @@ describe('Making test calls to pokeAPI endpoints ', function () {
             cy.writeFile('/cypress/fixtures/psyduckStats.json', response.body)
         })
         cy.readFile('/cypress/fixtures/psyduckStats.json')
+        cy.expect('/cypress/fixtures/psyduckStats.json').to.not.be.null;
     })
 })
