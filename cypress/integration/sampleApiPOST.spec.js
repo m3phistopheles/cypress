@@ -14,6 +14,6 @@ describe('Making calls to a sample POST API endpoint', function() {
         })
         result.its('body')
               .its('name')
-              .should('include', 'vero');i
+              .should('include', 'vero');
     })
 })
